@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Style.css">
+    <meta name=”viewport” content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="plotly-latest.min.js"></script>
+    <title>PET Recycling</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    <!-- d3 JavaScript -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+<!--Styling-->
+<style>
+body,h1,h2,h3,h4,h5,h6,ul {font-family: "Raleway", Arial, Helvetica, sans-serif}
+ul {list-style-type: none;margin: 0;padding: 0}
+li {display: inline}
+a {font-size:16px; text-decoration: "underline"; color:"rgb(36,100,148)"}
+
+</style>
+<body class="w3-light-grey">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--Navigation Bar-->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+    <a href="#" class="w3-bar-item w3-button w3-text-grey" ><i class="fa fa-recycle" style="font-size: 14px";></i></i>  Environmental Benefits of PET Bottle Recycling</a>
+    <nav class="topnav" id="Topnav"> 
+        <ul>
+            <li style="float:right"><a class="active w3-text-grey" href="PET.html" ><i class="fa fa-line-chart" style="font-size: 12px";></i> Results</a></li>
+            <li style="float:right"><a class="active w3-text-grey" href="Calculator.html"><i class="fa fa-calculator" style="font-size: 12px";></i>   Calculator</a></li>
+            <li style="float:right"><a class="active w3-text-grey" href="Index.html"><i class="fa fa-home" style="font-size: 16px";></i>   About</a></li>
+          </ul>
+    </nav>
+</div>
+<!-- Title -->
+<div class="w3-full">
+    <div class="w3-container w3-light-grey w3-center w3-margin" style="height:130px;">
+    <h1 style="color:rgb(36,100,148)">Assessing the Potential Environmental Benefits of Increased Recycled PET Waste through Environmental Awareness Programs</h1>
+    </div>
+</div>
+<!-- About Section -->
+<div class="w3-content" style="max-width:1532px;">
+    <div class="w3-container w3-center w3-margin-top" id="rooms">
+        <h4 style="color:rgb(140,172,196)">This Life Cycle Assessment was submitted as a final dissertation for the Degree of Master of Science in Corporate Environmental Management at the University of Surrey, Guildford, United Kingdom in October 2020. The dissertation achieved a distinction award and may be fully accessed <a href= "https://drive.google.com/file/d/1DMsV6B2qkDZtFxh0w2b4jxvlsL5WAaQb/view?usp=sharing">here</a>. Below is a brief summary of the assessment.</h4>
+    </div>
+</div>
+<!-- Introduction Section -->
+<div class="w3-full">
+    <div class="w3-container w3-white w3-justify w3-margin" style="height:270px;">
+    <h3 style="color:rgb(36,100,148)">INTRODUCTION</h3>    
+    <p class="w3-text-grey"> As awareness on the environmental impact of plastic packaging increases, consumers look for more sustainable alternatives for waste disposal. Recycling has emerged as one of the best waste management options; its environmental impact is considered to be less significant than that of more traditional alternatives. Life Cycle Assessment is used to holistically evaluate the environmental impact of a product system across different impact categories. The present assessment focuses on two different disposal scenarios for waste PET bottles by evaluating the complete Life Cycle.
+        The first scenario considers a business-as-usual scenario for waste PET bottle disposal in Mexico, while the second one considers an increase in post-consumer bottle sorting and closed-loop recycling due to the implementation of environmental awareness programs. What would be the environmental benefit of increasing the sorting and recycling of waste PET bottles? The obtained results show that an increase in recycling decreases the environmental impact across all selected category impacts, proving the effectiveness of environmental awareness programs. The Life Cycle Assessment results are used to quantify the environmental benefit of increased recycling rates.</p>
+    <p class="w3-large"><i class="fa fa-recycle" style="font-size: 16px;color:rgb(36,100,148)"></i></p>
+</div>
+<!-- Methodology Section -->
+<div class="w3-full">
+    <div class="w3-container w3-white w3-justify w3-margin" style="height:580px;">
+    <h3 style="color:rgb(36,100,148)">METHODOLOGY</h3>   
+    <div class="img-container">
+        <img src="SS3.png" alt="Cycle" style="width:650px;height:280px;">
+    </div> 
+    <p class="w3-text-grey">Life Cycle Assessment (LCA) is a methodology used to holistically evaluate the environmental impact of different waste disposal scenarios. Since LCA is useful for scenario comparison, it may be used to quantify the environmental impact of an increased rate of recycling through environmental awareness programs. The LCA compares a scenario in which a waste PET bottle follows the waste disposal scenario in Mexico (landfilling and incineration) with a second scenario in which bottles are sorted, collected and recycled through closed-loop technologies.
+    The LCA was developed following the guidelines established by the ISO 14040:2006 through four steps. The selected <a href="PET.html">impact categories</a> represent the critical impacts associated with the Life Cycle of a PET bottle at a local and global level.
+    The impact categories were assessed through ReCiPe 2016, which was considered suitable since its indicators were developed at a global level. The hierarchical point of view was selected; it is based on scientific consensus and considers that nature's limits must be respected.
+    The background was modelled using Ecoinvent version 3, while the data for the foreground was obtained from offical government documents.
+    </p>  
+    <p class="w3-large"><i class="fa fa-recycle" style="font-size: 16px;color:rgb(36,100,148)"></i></p>
+</div>
+<!-- Results Section -->
+<div class="w3-full">
+    <div class="w3-container w3-white w3-justify w3-margin" style="height:180px;">
+    <h3 style="color:rgb(36,100,148)">RESULTS</h3> 
+    <p class="w3-text-grey">By comparing the two scenarios, the impact on the environment of an intervention to collect and recycle waste PET bottles may be quantified.
+        The <a href="PET.html">results</a> tab shows the characterization results of the assessment. All of the impact categories show that closed-loop recycling has a more positive impact on the environment than the traditional waste management scenario in Mexico. 
+        In the <a href="Calculator.html">calculator</a> tab, the environmental impact of recycling PET may be quantified, and the positive effects of sorting and recycling may be seen. The graphs are interactive and were created using Javascript.
+    </p>
+    <p class="w3-large"><i class="fa fa-recycle" style="font-size: 16px;color:rgb(36,100,148)"></i></p>
+</div>

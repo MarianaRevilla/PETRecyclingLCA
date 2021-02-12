@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="plotly-latest.min.js"></script>
+    <title>PET Recycling</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    <!-- d3 JavaScript -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+<!--Styling-->
+<style>
+body,h1,h2,h3,h4,h5,h6,ul {font-family: "Raleway", Arial, Helvetica, sans-serif}
+ul {list-style-type: none;margin: 0;padding: 0}
+li {display: inline}
+a {display: block; padding: 8px; background-color:rgb(241, 241, 241); font-size:18px; text-decoration: none;}
+</style>
+<body class="w3-light-grey">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Navigation Bar-->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+        <a href="#" class="w3-bar-item w3-button w3-text-grey" ><i class="fa fa-recycle" style="font-size: 14px";></i></i>  Environmental Benefits of PET Bottle Recycling</a>
+        <nav class="topnav" id="Topnav"> 
+            <ul>
+                <li style="float:right"><a class="active w3-text-grey" href="PET.html" ><i class="fa fa-line-chart" style="font-size: 12px";></i> Results</a></li>
+                <li style="float:right"><a class="active w3-text-grey" href="Calculator.html"><i class="fa fa-calculator" style="font-size: 12px";></i> Calculator</a></li>
+                <li style="float:right"><a class="active w3-text-grey" href="About.html"><i class="fa fa-home" style="font-size: 16px";></i> About</a></li>
+              </ul>
+        </nav>
+</div>
+<body></body>
+<!-- TopContainer (the title) -->
+<div class="w3-content" style="max-width:1532px;">
+    <div class="w3-container w3-center w3-margin-top" id="rooms">
+        <h1 style="color:rgb(36,100,148)">Calculator</h1>
+    </div>
+<!-- User Input Section -->
+<div class="w3-full">
+    <div class="w3-container w3-light-grey w3-center w3-margin" style="height:90px;">
+        <form>
+            How many kilograms of waste PET bottles were recycled?: <input type="number" id="firstNumber"  value=1/><br>
+            <input type="button" onClick="multiplyBy()" Value="Calculate Environmental Savings" />
+        </form>
+    </div>
+</div>
+<div class="w3-full">
+    <div class="w3-container w3-light-grey w3-center w3-margin" style="height:70px;">
+<p style="color:rgb(36,100,148)">The following graphs show in blue the environmental impact that would have occured if the PET had not been recycled. The grey areas show the environmental benefit derived from the PET recycling, as you can see, recyling is the better option versus a traditional waste management scenario in Mexico.</p>
+</div>
+<!-- Water Consumption Results Container -->
+<div class="w3-third">
+    <div class="w3-container w3-white w3-justify w3-margin" style="height:203px;">
+    <p>Saved liters of water : 
+    <span style="color:rgb(36,100,148)" id = "result"></span>
+    </p>
+    <p class="w3-large"><i class="fa fa-recycle" style="font-size: 16px"></i></p>
+    <p class="w3-text-grey"> Recycling reduces the need to consume water, as no virgin resources are needed to produce new PET.</p>
+    </div>
+</div>
+<!-- Climate Change Results Container -->
+<div class="w3-third">
+    <div class="w3-container w3-white w3-justify w3-margin">
+        <p>Saved kilograms of Carbon Dioxide:
+        <span style="color:rgb(36,100,148)" id = "result2"></span>
+        </p>
+        <p class="w3-large"><i class="fa fa-recycle" style="font-size: 16px"></i></p>
+        <p class="w3-text-grey">All Greenhouse Gases are converted to Carbon Dioxide equivalents and then added up. For example, 1kg of nitrous oxide has the same effect as 298 kg of CO2. Thus, the unit for this impact category is CO2 eq.</p>
+    </div>
+</div>
+<!-- Ozone Depletion Results Container -->
+<div class="w3-third">
+    <div class="w3-container w3-white w3-justify w3-margin">
+        <p> Saved kilograms of Ozone-depleting substances:
+        <span style="color:rgb(36,100,148)" id = "result3"></span>
+        </p>
+        <p class="w3-large"><i class="fa fa-recycle" style="font-size: 16px"></i></p>
+        <p class="w3-text-grey">Ozone Depleting substances are quantified relative to CFC-11, a powerful ozone-destructive substance. All ozone-destructive pollutants are converted to CFC-11 equivalents according to their chemical structure and lifetime. </p>
+    </div>
+</div>
+<!-- Human Toxicity Results Container -->
+<div class="w3-third">
+    <div class="w3-container w3-white w3-justify w3-margin">
+        <p>Saved kilograms of toxic substances:
+        <span style="color:rgb(36,100,148)" id = "result4"></span>
+        </p>
+        <p class="w3-large"><i class="fa fa-recycle" style="font-size: 16px"></i></p>
+        <p class="w3-text-grey">This impact category is measured in 1,4-DCB equivalents. Other toxic substances are compared to 1,4-DCB by dividing their potential impacts to those of 1,4-DCB and then added together.</p>
+    </div>
+</div>
+<!-- Eutrophication Results Container -->
+<div class="w3-third">
+    <div class="w3-container w3-white w3-justify w3-margin">
+        <p>Saved kilograms of eutrophying substances:
+        <span style="color:rgb(36,100,148)" id = "result5"></span>
+        </p>
+        <p class="w3-large"><i class="fa fa-recycle" style="font-size: 16px"></i></p>
+        <p class="w3-text-grey">All eutrophying substances are compared to the potential effects of phosphorous on freshwater species. The unit for this impact category are kilograms of phosphorous equivalent.</p>
+    </div>
+</div>
+<!-- Acidification Results Container -->
+<div class="w3-third">
+    <div class="w3-container w3-white w3-justify w3-margin">
+        <p>Saved kilograms of acidifying substances:
+        <span style="color:rgb(36,100,148)" id = "result6"></span>
+        </p>
+        <p class="w3-large"><i class="fa fa-recycle" style="font-size: 16px"></i></p>
+        <p class="w3-text-grey">This impact category is measured in equivalent kilograms of emitted SO2 to the air. The acidification potential values for different acidifying substances are calculated and then added together for a single score.</p>
+    </div>
+</div>
+<!-- Link to Javascript function DONOTDELETE -->
+<script src="multiplyBy().js"></script>
+</body>
+</html> 

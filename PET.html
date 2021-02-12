@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="plotly-latest.min.js"></script>
+    <title>PET Recycling</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    <!-- d3 JavaScript -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+<!--Styling-->
+<style>
+body,h1,h2,h3,h4,h5,h6,ul {font-family: "Raleway", Arial, Helvetica, sans-serif}
+ul {list-style-type: none;margin: 0;padding: 0}
+li {display: inline}
+a {display: block; padding: 8px; background-color:rgb(241, 241, 241); font-size:18px; text-decoration: none;}
+</style>
+<body class="w3-light-grey">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Navigation Bar-->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+        <a href="#" class="w3-bar-item w3-button w3-text-grey" ><i class="fa fa-recycle" style="font-size: 14px";></i></i>  Environmental Benefits of PET Bottle Recycling</a>
+        <nav class="topnav" id="Topnav"> 
+            <ul>
+                <li style="float:right"><a class="active w3-text-grey" href="PET.html" ><i class="fa fa-line-chart" style="font-size: 12px";></i> Results</a></li>
+                <li style="float:right"><a class="active w3-text-grey" href="Calculator.html"><i class="fa fa-calculator" style="font-size: 12px";></i> Calculator</a></li>
+                <li style="float:right"><a class="active w3-text-grey" href="Index.html"><i class="fa fa-home" style="font-size: 16px";></i> About</a></li>
+              </ul>
+        </nav>
+</div>
+<!-- TopContainer (the title) -->
+<div class="w3-content" style="max-width:1532px;">
+    <div class="w3-container w3-center w3-margin-top" id="rooms">
+        <h1 style="color:rgb(36,100,148)">Results</h1>
+    </div>
+<!-- All Categories Containers -->
+<div class="w3-threequarter">
+    <div class="w3-container w3-light-grey w3-justify w3-margin-left" style="height:450px;">
+        <div id="canvas7" style="width:100%"></div>
+        <script src="ImpactCategoriesCharts.js"></script>
+        </div>
+    </div>
+</div>
+<div class="w3-rest">
+    <div class="w3-container w3-light-grey w3-justify w3-margin-right" style="height:450px;">
+        <div id="canvas7" style="width:100%"></div>
+        <script src="ImpactCategoriesCharts.js"></script>
+        <p>The Business-As-Usual and the Recycling Scenarios were modelled using SimaPro Version 8.4.0.0 and evaluated with ReCiPe 2016. Their whole life cycles were considered for the assessment. The comparison between both scenarios quantifies the environmental benefit derived from increased recycling rates. The graphs on this page show the characterization results for both scenarios. In all the selected impact categories, increased rates of waste PET recyling reduce the negative environmental impact. The Recycling Scenario represents the better waste management option when compared to the mexican Business-as-Usual Scenario.
+            Results show that environmental awareness campaigns effectively decrease the environmental impact associated with the Life Cycle of a PET bottle.</p>
+        </div>
+    </div>
+</div>
+
+   <!-- Second Container-->
+  <div class="w3-content" style="max-width:1532px;">
+    <div class="w3-container w3-margin-top" id="rooms">
+        <h3 style="color:rgb(36,100,148)">Impact Categories</h3>
+    </div>
+     <!-- Water Consumption Category -->
+     <div class="w3-third">
+        <div class="w3-container w3-white w3-justify w3-margin">
+            <div id="canvas" style="width:100%"></div>
+            <script src="ImpactCategoriesCharts.js"></script>
+            <h3 class="w3-text-grey">Water Consumption</h3>
+            <p>Water resources are scarce, and the increasing competition for access to them impacts human health and the natural environment. The total amount of water used directly or indirectly in the life cycle of a product is known as the water footprint.
+                In the consumptive approach to water, freshwater incorporated into a product becomes unavailable for other uses. A reduction in the availability of blue and green waters leads to a decrease in vegetation and fish species, and malnutrition in consequence.  </p>
+            <p class="w3-large"><i class="fa fa-pagelines"></i><i class="fa fa-user"></i></p>
+            <p class="w3-text-grey"> For this impact category, the recycling of 1kg of waste PET saves 27% of the consumed water vs the Business-As-Usual Scenario.</p>
+        </div>
+    </div>
+     <!-- Climate Change -->
+    <div class="w3-third">
+        <div class="w3-container w3-white w3-justify w3-margin">
+            <div id="canvas6" style="width:100%"></div>
+            <script src="ImpactCategoriesCharts.js"></script>
+            <h3 class="w3-text-grey">Climate Change</h3>
+          <p>According to the United Nations' International Panel on Climate Change (IPCC) For the last fifty years, the Earth’s atmosphere has warmed due to an increase in greenhouse gas concentrations. An increase in greenhouse gas concentrations in the atmosphere leads to an increase in the global mean temperature and disruptions in the natural biogeochemical cycles, which in turn, has adverse consequences for terrestrial and freshwater species as well as the human health.</p>
+          <p class="w3-large"><i class="fa fa-pagelines"></i><i class="fa fa-user"></i></p>
+          <p class="w3-text-grey"> For this impact category, the recycling of 1kg of waste PET saves 63% of the Greenhouse Gases emitted in the Business-As-Usual Scenario.</p>
+        </div>
+      </div>
+    </div>
+     <!-- Ozone Depletion -->
+     <div class="w3-third">
+        <div class="w3-container w3-white w3-justify w3-margin">
+            <div id="canvas2" style="width:100%"></div>
+            <script src="ImpactCategoriesCharts.js"></script>
+            <h3 class="w3-text-grey">Ozone Depletion</h3>
+          <p>
+              Ozone in the top atmospheric layers is a favourable substance for human health as well as the natural 
+              environment since it absorbs some of the solar radiation transmitted to the Earth’s surface. 
+              When the ozone concentration in the stratosphere decreases by 1%, more UV-B radiation reaches the Earth’s surface, increasing the incidence of skin cancer in humans by 7%. A decrease in stratospheric ozone is caused by substances containing chlorine or bromine, such as chlorofluorocarbons (CFCs).</p>
+          <p class="w3-large"><i class="fa fa-user"></i></p>
+          <p class="w3-text-grey"> The recycling of 1kg of waste PET saves 85% of the ozone-depleting substances emitted in the Business-As-Usual scenario.</p>
+        </div>
+    </div>
+     <!-- Human Toxicity -->
+     <div class="w3-third">
+        <div class="w3-container w3-white w3-justify w3-margin">
+            <div id="canvas3" style="width:100%"></div>
+            <script src="ImpactCategoriesCharts.js"></script>
+            <h3 class="w3-text-grey">Human Toxicity</h3>
+          <p>The damage to human health caused by a substance depends on its fate, exposure and effect.
+            The increase of toxic substances in the environment leads to an increase in human intake, which in turn causes an increase in disease incidence, ultimately damaging human health.
+            The human intake of toxic substances may be through all intake routes, such as air, water, and food. This impact category does not consider toxic substances known to cause cancer,
+               as listed by the International Agency for Research on Cancer. </p>
+          <p class="w3-large"><i class="fa fa-user"></i></p>
+          <p class="w3-text-grey"> For this impact category, the recycling of 1kg of waste PET saves the emission of 96% of the toxic substances vs the Business-As-Usual Scenario.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Eutrophication -->
+    <div class="w3-third">
+        <div class="w3-container w3-white w3-justify w3-margin">
+            <div id="canvas4" style="width:100%"></div>
+            <script src="ImpactCategoriesCharts.js"></script>
+            <h3 class="w3-text-grey">Eutrophication</h3>
+          <p>Eutrophication decreases the productivity of freshwater bodies. Eutrophication is a phenomenon that occurs when significant amounts of macronutrients, such as nitrogen and phosphorus, enter aquatic ecosystems. The excessive presence of the macronutrients in water leads to excessive biological productivity; an increase in the growth of algae and cyanobacteria. The algal growth leads to a depletion of the oxygen available for other species and usually results in the loss of species, such as fish and invertebrates. </p>
+          <p class="w3-large"><i class="fa fa-pagelines"></i></p>
+          <p class="w3-text-grey"> For this impact category, the recycling of 1kg of waste PET avoids the emission of 27% of the eutrophying pollutants vs the Business-As-Usual Scenario.</p>
+        </div>
+      </div>
+    </div>
+     <!-- Acidification -->
+     <div class="w3-third">
+        <div class="w3-container w3-white w3-justify w3-margin">
+            <div id="canvas5" style="width:100%"></div>
+            <script src="ImpactCategoriesCharts.js"></script>
+            <h3 class="w3-text-grey">Acidification</h3>
+          <p>Nitrogen oxides (NOx), sulphur dioxide (SO2), hydrochloric acid (HCl) and ammonia (NH3) are the significant substances that contribute to acid deposition, causing a change in the naturally- occurring acidity of the soil. Since plant species depend on specific pH values to thrive, a decrease in soil pH may result in vegetation loss.
+            Terestrial acidification begins with the emission of acidifying substances, followed by their deposition from the atmosphere, leading to damage to terrestrial ecosystems.</p>
+          <p class="w3-large"><i class="fa fa-pagelines"></i></p>
+          <p class="w3-text-grey"> For this impact category, the recycling of 1kg of waste PET avoids the emission of 14% of the acidifying substances vs the Business-As-Usual Scenario.</p>
+        </div>
+      </div>
+    </div>  
+ </body>
+</html> 
